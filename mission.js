@@ -8,9 +8,9 @@ function changeTheme() {
     console.log(current);
     if (current == 'dark'){
         document.body.className = 'dark';
-        logo.setAttribute('src', 'byui-logo_white.png');
+        logo.setAttribute('src', 'mission/byui-logo_white.png');
     } else {
         document.body.classList.remove('dark');
-        logo.setAttribute('src', 'logo.webp');
+        logo.setAttribute('src', 'mission/logo.webp');
     }
 }
