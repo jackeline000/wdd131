@@ -2,12 +2,19 @@ body {
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.5;
+  }
+  .dark {
+    background-color: black;
+    color: white;
+  }
+  .dark h2{
+    color: rgb(160, 212, 237);
   }
   
-  .content {
+  #content {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
     border: 1px solid #b6b6b7; 
   }
