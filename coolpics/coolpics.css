@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
 :root {
   --primary-color: #52489c;
   --secondary-color: #59c3c3;
@@ -8,6 +9,7 @@
   --primary-font: Arial, Helvetica, sans-serif;
   --secondary-font: Mooli, sans-serif;
 }
+
 body {
   font-family: var(--primary-font);
   font-size: 1.3em;
@@ -15,7 +17,10 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  min-height: 100vh;  
+  flex-direction: column;
 }
+
 header {
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -23,10 +28,12 @@ header {
   text-align: center;
   padding: 15px;
 }
+
 header h1 {
   font-family: var(--secondary-font);
   margin: 0;
 }
+
 header button {
   background: none;
   color: var(--text-light);
@@ -34,62 +41,110 @@ header button {
   font-size: 1.2em;
   cursor: pointer;
   margin-top: 10px;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;  
 }
+
 header button:hover {
   background-color: var(--secondary-color);
 }
+
+header nav {
+  display: none;
+  text-align: center;  
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;  
+  display: flex;
+  justify-content: center;
+  gap: 20px;  
+}
+
+header nav ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
 main {
   padding: 20px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  flex: 1;  
 }
+
 h2 {
   color: var(--text-dark);
   font-family: var(--secondary-font);
   text-align: center;
   margin-top: 20px;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   justify-items: center;
 }
+
 .gallery figure {
   margin: 0;
 }
+
 .gallery img {
   width: 250px;
   height: 250px;
   object-fit: cover;
 }
+
 footer {
   background-color: var(--primary-color);
   color: var(--text-light);
   text-align: center;
   padding: 10px;
   width: 100%;
+  margin-top: auto;  
 }
+
 a:link,
 a:visited {
   color: var(--text-dark);
 }
+
 @media screen and (min-width: 1000px) {
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  header nav {
+    display: block;
+    margin-top: 10px;
   }
+
   header button {
-    display: none;
+    display: none;  
   }
 }
+
+@media screen and (max-width: 999px) {
+  header nav {
+    display: none;
+  }
+
+  header button {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;  
+  }
+}
+
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
