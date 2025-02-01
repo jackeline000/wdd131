@@ -9,6 +9,7 @@
 
 
 body {
+  margin: 0;
  font-family: var(--primary-font);
  font-size: 20px;
  background-color: #ccc;
@@ -33,6 +34,7 @@ a {
  padding: 8px;
 }
 header, footer {
+  margin: 0;
  background-color: var(--primary-color);
  padding: 10px;
 }
@@ -51,6 +53,8 @@ figure img {
  box-shadow: 5px 5px 15px black;
 }
 #menu-button {
+ display: block;
+ margin: 0 auto;
  background-color: var(--primary-color);
  border: none;
  color: white;
