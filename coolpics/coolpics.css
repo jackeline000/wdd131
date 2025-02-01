@@ -1,149 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
+
 :root {
-  --primary-color: #52489c;
-  --secondary-color: #59c3c3;
-  --accent-color: #f45b69;
-  --text-dark: #333;
-  --text-light: #ebebeb;
-  --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: Mooli, sans-serif;
+ --primary-color: #52489c;
+ --secondary-color: #ccc;
+ --primary-font: Mooli, sans-serif;
 }
+
 
 body {
-  font-family: var(--primary-font);
-  font-size: 1.3em;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column; /* Make the body a flex container */
-  min-height: 100vh; /* Ensure the body takes the full viewport height */
+ font-family: var(--primary-font);
+ font-size: 20px;
+ background-color: #ccc;
+ text-align: center;
 }
+
 
 header {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  width: 100%;
-  text-align: center;
-  padding: 15px;
+ background-color: var(--primary-color);
+ color: white;
+ width: 100%;
+ padding: 15px;
 }
 
-header h1 {
-  font-family: var(--secondary-font);
-  margin: 0;
-}
 
-header button {
-  background: none;
-  color: var(--text-light);
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
-  margin-top: 10px;
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;  
+a, h1, footer {
+ color: white;
 }
-
-header button:hover {
-  background-color: var(--secondary-color);
+a {
+ display: block;
+ margin: 8px;
+ padding: 8px;
 }
-
-header nav {
-  display: none; /* Hide the navigation by default for smaller screens */
+header, footer {
+ background-color: var(--primary-color);
+ padding: 10px;
 }
-
-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;  
-  display: flex;
-  justify-content: center;
-  gap: 20px;  
-}
-
-header nav ul li a {
-  color: var(--text-light);
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex: 1; /* Allow the main content to expand and push the footer down */
-}
-
-h2 {
-  color: var(--text-dark);
-  font-family: var(--secondary-font);
-  text-align: center;
-  margin-top: 20px;
-}
-
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  justify-items: center;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 10px;
+ padding: 10px;
+}
+figure img {
+ width: 250px;
+ height: 250px;
+ object-fit: cover;
+ padding: 5px;
+ background-color: white;
+ box-shadow: 5px 5px 15px black;
+}
+#menu-button {
+ background-color: var(--primary-color);
+ border: none;
+ color: white;
+ font-size: 1.3em;
+ cursor: pointer;
+ padding: 10px;
 }
 
-.gallery figure {
+
+nav ul {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: block;
 }
 
-.gallery img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
+
+nav ul.hide {
+ display: none;
 }
 
-footer {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-  margin-top: auto; /* Push the footer to the bottom of the page */
+
+.viewer {
+ display: grid;
+ grid-template-columns: 1fr;
+ position: fixed;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ background-color: rgba(0, 0, 0, 0.75);
+ z-index: 10;
+}
+.viewer button {
+ background-color: transparent;
+ color: white;
+ border: none;
+ font-size: 1.3em;
+ justify-self: end;
+
+
+}
+.viewer img {
+ max-width: 100%;
+ justify-self: center;
 }
 
-a:link,
-a:visited {
-  color: var(--text-dark);
-}
-
-/* Media Queries for responsiveness */
-@media screen and (min-width: 1000px) {
-  header nav {
-    display: flex; /* Show the navigation menu for larger screens */
-    justify-content: center;
-    gap: 20px;
-  }
-
-  header button {
-    display: none; /* Hide the menu button for larger screens */
-  }
-}
-
-@media screen and (max-width: 999px) {
-  header nav {
-    display: none; /* Keep navigation hidden for smaller screens */
-  }
-
-  header button {
-    display: block; /* Show the menu button for smaller screens */
-  }
-}
 
 @media screen and (min-width: 700px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+ .gallery {
+   grid-template-columns: 1fr 1fr;
+ }
+ }
+
 
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  #menu-button {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+.viewer {
+  margin: 50px;
+  padding: 50px;
 }
+.viewer img {
+  max-width: 800px;
+
+
+}
+ }
