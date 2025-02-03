@@ -1,68 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-
 :root {
- --primary-color: #52489c;
- --secondary-color: #ccc;
- --primary-font: Mooli, sans-serif;
+  --primary-color: #52489c;
+  --secondary-color: #ccc;
+  --primary-font: Mooli, sans-serif;
 }
-
 
 body {
-  margin: 0;
- font-family: var(--primary-font);
- font-size: 20px;
- background-color: #ccc;
- text-align: center;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  background-color: #ccc;
+  text-align: center;
+  margin: 0 auto;
 }
-
 
 header {
- background-color: var(--primary-color);
- color: white;
- width: 100%;
- padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  width: 100%;
+  padding: 15px;
 }
 
-
-a, h1, footer {
- color: white;
+a,
+h1,
+footer {
+  color: white;
 }
 a {
- display: block;
- margin: 8px;
- padding: 8px;
+  display: block;
+  margin: 8px;
+  padding: 8px;
 }
-header, footer {
-  margin: 0;
- background-color: var(--primary-color);
- padding: 10px;
+header,
+footer {
+  background-color: var(--primary-color);
+  padding: 10px;
 }
 .gallery {
- display: grid;
- grid-template-columns: 1fr;
- gap: 10px;
- padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
 }
 figure img {
- width: 250px;
- height: 250px;
- object-fit: cover;
- padding: 5px;
- background-color: white;
- box-shadow: 5px 5px 15px black;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 15px black;
 }
 #menu-button {
- display: block;
- margin: 0 auto;
- background-color: var(--primary-color);
- border: none;
- color: white;
- font-size: 1.3em;
- cursor: pointer;
- padding: 10px;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+  padding: 10px;
 }
-
 
 nav ul {
   list-style: none;
@@ -71,44 +68,38 @@ nav ul {
   display: block;
 }
 
-
 nav ul.hide {
- display: none;
+  display: none;
 }
-
 
 .viewer {
- display: grid;
- grid-template-columns: 1fr;
- position: fixed;
- top: 0;
- left: 0;
- bottom: 0;
- right: 0;
- background-color: rgba(0, 0, 0, 0.75);
- z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
 }
 .viewer button {
- background-color: transparent;
- color: white;
- border: none;
- font-size: 1.3em;
- justify-self: end;
-
-
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.3em;
+  justify-self: end;
 }
 .viewer img {
- max-width: 100%;
- justify-self: center;
+  max-width: 100%;
+  justify-self: center;
 }
 
-
 @media screen and (min-width: 700px) {
- .gallery {
-   grid-template-columns: 1fr 1fr;
- }
- }
-
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 @media screen and (min-width: 1000px) {
   .gallery {
@@ -122,13 +113,12 @@ nav ul.hide {
     justify-content: center;
     gap: 15px;
   }
-.viewer {
-  margin: 50px;
-  padding: 50px;
-}
-.viewer img {
-  max-width: 800px;
 
-
+  .viewer {
+    margin: 50px;
+    padding: 50px;
+  }
+  .viewer img {
+    max-width: 800px;
+  }
 }
- }
