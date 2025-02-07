@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --primary-color: #473144;
+    --secondary-color: #EFC69B;
+    --font-color: #AF1B3F;
+    --primary-font: Lora, Impact, serif;
+    --secondary-font: Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+}
+
+h1 {
+    font-family: Lora, Impact, serif;
+    color: #473144;
+    text-align: center;
+    font-size: 2em;
+    padding: 20px 0;
+    margin: 0; 
+}
+
+a {
+    color: #AF1B3F;
+    text-decoration: none;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+nav {
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding: 10px 0;
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+nav li {
+    margin: 0 15px;
+}
+#maincontent {
+  display: grid;
+  grid-template-columns: 3fr 1fr; 
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#articles {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  align-items: center; 
+}
+
+.details {
+  color: var(--primary-color);
+  font-size: 0.9em;
+  line-height: 1.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+  border-right: 1px solid var(--secondary-color);
+  padding-right: 15px;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+
+.article-content h2 {
+  color: var(--font-color);
+  margin: 0 0 15px;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.article-content img {
+  max-width: 150px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  align-self: center;
+}
+
+.article-content p {
+  margin: 0 0 10px;
+  line-height: 1.6em;
+  text-align: left;
+}
+
+.article-content a {
+  color: var(--font-color);
+  font-weight: bold;
+  text-align: left;
+}
+
+#filters {
+  flex: 1; 
+  border: 1px solid var(--secondary-color);
+  padding: 20px; 
+  color: var(--primary-color);
+
+}
+
+
+
+

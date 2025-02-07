@@ -36,6 +36,7 @@ footer {
   background-color: var(--primary-color);
   padding: 10px;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -49,6 +50,7 @@ figure img {
   padding: 5px;
   background-color: white;
   box-shadow: 5px 5px 15px black;
+  margin: 30px;
 }
 #menu-button {
   display: block;
