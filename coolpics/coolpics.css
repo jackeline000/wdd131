@@ -40,7 +40,7 @@ footer {
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 5px;
   padding: 10px;
 }
 figure img {
@@ -121,6 +121,6 @@ nav ul.hide {
     padding: 50px;
   }
   .viewer img {
-    max-width: 800px;
+    max-width: 50%;
   }
 }
