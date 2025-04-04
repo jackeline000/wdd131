@@ -1,0 +1,82 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lilou - Skincare Quiz</title>
+  <link rel="stylesheet" href="styles/home.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/LILOU.png" alt="Lilou Logo" />
+        </a>
+      </div>          
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="quiz-section">
+      <h1>Find Your Glow</h1>
+      <p>Answer a few quick questions to discover your personalized product.</p>
+
+      <form id="skincare-quiz">
+        <fieldset>
+          <legend>Have you used skincare products before?</legend>
+          <label><input type="radio" name="usedBefore" value="yes" required> Yes</label>
+          <label><input type="radio" name="usedBefore" value="no"> No</label>
+          <label><input type="radio" name="usedBefore" value="unknown"> I don't know</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Do you have acne?</legend>
+          <label><input type="radio" name="acne" value="yes" required> Yes</label>
+          <label><input type="radio" name="acne" value="no"> No</label>
+          <label><input type="radio" name="acne" value="unknown"> I don't know</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>What type of facial skin do you have?</legend>
+          <label><input type="radio" name="skinType" value="oily" required> Oily</label>
+          <label><input type="radio" name="skinType" value="dry"> Dry</label>
+          <label><input type="radio" name="skinType" value="combo"> Combo</label>
+          <label><input type="radio" name="skinType" value="normal"> Normal</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>How often do you use skincare?</legend>
+          <label><input type="radio" name="usage" value="daily" required> Daily</label>
+          <label><input type="radio" name="usage" value="moderate"> Moderate</label>
+          <label><input type="radio" name="usage" value="little"> Little to none</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>How much are you willing to spend on skincare?</legend>
+          <label><input type="radio" name="budget" value="low" required> $10–18</label>
+          <label><input type="radio" name="budget" value="mid"> $20–35</label>
+          <label><input type="radio" name="budget" value="high"> $40–60</label>
+          <label><input type="radio" name="budget" value="premium"> $75+</label>
+        </fieldset>
+
+        <button type="submit">Get My Recommendation</button>
+      </form>
+
+      <div id="result" class="quiz-result"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Lilou Skincare</p>
+  </footer>
+
+  <script src="lilou.js"></script>
+</body>
+</html>
